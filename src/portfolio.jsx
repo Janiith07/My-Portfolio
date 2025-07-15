@@ -238,7 +238,7 @@ const [activeCategory, setActiveCategory] = useState('All');
         <div className="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="text-2xl font-bold text-transparent bg-gradient-to-r from-red-500 via-red-700 to-red-900 bg-clip-text">
-              Sanjula Mohotti
+              Lakindu Janith
             </div>
             
             {/* Desktop Navigation */}
