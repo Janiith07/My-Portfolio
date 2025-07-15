@@ -147,7 +147,7 @@ const typedText = useTypedText(roles, 100, 1500);
       description: 'Completed a comprehensive diploma program covering core IT concepts and practical skills'
     },
     {
-      year: '2019-2021',
+      year: '2020-2023',
       title: 'Advance Level in Commerce Stream',
       institution: 'Rahula College Matara',
       description: 'ICT, Accounting, Business Studies, and General English subjects with a focus on analytical and problem-solving skills'
@@ -165,7 +165,7 @@ const typedText = useTypedText(roles, 100, 1500);
     category: 'Web App',
     description: 'A comprehensive Java-based e-commerce solution for the toy industry. Includes toy management, order and delivery tracking, employee and user administration, payment management — all built to meet specific client requirements.',
     technologies: ['Java', 'Servlets', 'HTML', 'CSS', 'JavaScript', 'Tomcat'],
-    image: 'https://postimg.cc/0KPV545C',
+    image: 'src="/toy.png"',
     github: 'https://github.com/Janiith07/TOYMART_Web_Site.git',
   },
   
