@@ -675,7 +675,7 @@ const [activeCategory, setActiveCategory] = useState('All');
   {/* Social Icons at bottom */}
   <div className="flex mt-auto space-x-6">
     <a
-      href=""
+      href="https://github.com/Janiith07"
       target="_blank"
       rel="noopener noreferrer"
       className="text-gray-400 transition-colors hover:text-red-600"
@@ -684,7 +684,7 @@ const [activeCategory, setActiveCategory] = useState('All');
       <Github size={24} />
     </a>
     <a
-      href=""
+      href="https://www.linkedin.com/in/lakindu-janith-9b16bb318/"
       target="_blank"
       rel="noopener noreferrer"
       className="text-gray-400 transition-colors hover:text-red-600"
@@ -702,7 +702,7 @@ const [activeCategory, setActiveCategory] = useState('All');
       <Facebook size={24} />
     </a>
     <a
-      href=""
+      href="https://www.instagram.com/_lakindu_07?utm_source=qr&igsh=dDMxYTRsaGdraXJm"
       target="_blank"
       rel="noopener noreferrer"
       className="text-gray-400 transition-colors hover:text-red-600"
