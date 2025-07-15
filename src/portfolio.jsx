@@ -346,9 +346,9 @@ const [activeCategory, setActiveCategory] = useState('All');
                 <h3 className="text-2xl font-bold text-white">Introduction</h3>
               </div>
               <p className="leading-relaxed text-white/80">
-                I'm a second-year Software Engineering undergraduate at the Sri Lanka Institute of Information Technology (SLIIT), driven by a passion for building innovative and impactful digital solutions. With a strong foundation in full-stack development and mobile application design, I specialize in crafting user-friendly, efficient applications using modern technologies like React, Node.js, PHP, and Kotlin.
-                I hold a Diploma in IT from ESOFT Metro Campus, which has further strengthened my technical and analytical skills. I particularly enjoy working on UI/UX design and frontend development, where creativity meets functionality.
-                I thrive in collaborative environments, love solving real-world problems, and am always eager to explore new tools and frameworks to stay ahead in the fast-evolving tech landscape.
+                I'm a second-year Software Engineering student with a passion for technology and a drive to build innovative solutions. Though early in my academic journey, 
+                I’m actively exploring core programming concepts, web development (HTML/CSS/JavaScript), and object-oriented design. Eager to expand my skills in full-stack development and mobile app creation, 
+                I’m diving into frameworks like React and Node.js while sharpening my problem-solving abilities. My goal is to blend creativity with technical rigor to develop user-friendly applications that make an impact.
               </p>
               <div className="flex mt-6 space-x-4">
                 <a href="https://github.com/SanjulaMohotti" target="_blank" rel="noopener noreferrer"
