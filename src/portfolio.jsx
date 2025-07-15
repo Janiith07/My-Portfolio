@@ -114,18 +114,18 @@ const roles = ['Frontend Developer', 'Full Stack Developer', 'UI/UX Designer'];
 const typedText = useTypedText(roles, 100, 1500);
 
   const technicalSkills = [
-    { name: 'HTML/CSS', level: 95 },
-    { name: 'PHP', level: 50 },
-    { name: 'JavaScript', level: 85 },
-    { name: 'React', level: 80 },
-    { name: 'Java', level: 60 },
-    { name: 'MySQL', level: 75 },
-    { name: 'Python', level: 60 },
-    { name: 'Kotlin', level: 70 },
+    { name: 'HTML/CSS', level: 40 },
+    { name: 'PHP', level: 10 },
+    { name: 'JavaScript', level: 10 },
+    { name: 'React', level: 5 },
+    { name: 'Java', level: 40 },
+    { name: 'MySQL', level: 40 },
+    { name: 'Python', level: 40 },
+    { name: 'Kotlin', level: 5 },
   ];  
 
   const softSkills = [
-    { name: 'Work Under Pressure', level: 90 },
+    { name: 'Work Under Pressure', level:80 },
     { name: 'Team Collaboration', level: 95 },
     { name: 'Problem Solving', level: 85 },
     { name: 'Communication', level: 88 },
@@ -135,22 +135,22 @@ const typedText = useTypedText(roles, 100, 1500);
 
   const educationData = [
     {
-      year: '2023-Present',
+      year: '2024-Present',
       title: 'BSc (Hons) in Information Technology',
       institution: 'Sri Lanka Institute of Information Technology (SLIIT)',
       description: 'Specialized in Software Engineering '
     },
     {
-      year: '2023-2024',
+      year: '2024-2025',
       title: 'Diploma in Information Technology',
       institution: 'ESOFT Metro Campus',
       description: 'Completed a comprehensive diploma program covering core IT concepts and practical skills'
     },
     {
       year: '2019-2021',
-      title: 'Advance Level in Physical Science',
-      institution: 'A/ Swarnapali Balika Vidyalaya',
-      description: 'Mathematics, Physics, Chemistry, and General English subjects with a focus on analytical and problem-solving skills'
+      title: 'Advance Level in Commerce Stream',
+      institution: 'Rahula College Matara',
+      description: 'ICT, Accounting, Business Studies, and General English subjects with a focus on analytical and problem-solving skills'
     },
   ];
 
@@ -161,61 +161,14 @@ const typedText = useTypedText(roles, 100, 1500);
   
   const projects = [
   {
-    title: 'Ceylon Coir E-commerce Platform',
+    title: 'Online Toy Store',
     category: 'Web App',
-    description: 'A comprehensive MERN stack-based e-commerce solution tailored for the coir industry. Includes warehouse management, order and delivery tracking, employee and user administration, financial reporting, and machine-product management — all built to meet specific client requirements.',
-    technologies: ['React.js', 'Tailwindcss', 'MongoDB', 'Express.js', 'Node.js'],
-    image: 'https://i.postimg.cc/SQv3MzMr/image.png',
-    github: 'https://github.com/SanjulaMohotti/Ceylon-Coir-Company',
+    description: 'A comprehensive Java-based e-commerce solution for the toy industry. Includes toy management, order and delivery tracking, employee and user administration, payment management — all built to meet specific client requirements.',
+    technologies: ['Java', 'Servlets', 'HTML', 'CSS', 'JavaScript', 'Tomcat'],
+    image: 'https://postimg.cc/0KPV545C',
+    github: 'https://github.com/Janiith07/TOYMART_Web_Site.git',
   },
-  {
-    title: 'My Pocket - Financial Tracker Mobile App',
-    category: 'Mobile App',
-    description: 'A feature-rich mobile app for personal finance tracking. Allows users to manage income and expenses, analyze category-wise spending, and set monthly budgets with real-time progress visualization using Kotlin and Android Studio.',
-    technologies: ['Kotlin', 'Android Studio'],
-    image: 'https://i.postimg.cc/8P6nbSXq/image.png',
-    github: 'https://github.com/SanjulaMohotti/My-Pocket',
-  },
-  {
-    title: 'Beaura Salon - UI/UX Design',
-    category: 'UI/UX Design',
-    description: 'A visually captivating UI/UX design created in Figma for a modern beauty salon website. Focused on user-friendly appointment booking, service browsing, and aesthetic appeal for mobile and web platforms.',
-    technologies: ['Figma', 'Kotlin', 'Android Studio'],
-    image: 'https://i.postimg.cc/rwdnpLxh/image.png',
-    github: 'https://github.com/SanjulaMohotti/Beaura-Salon',
-  },
-  {
-    title: 'KFC Food Delivery - Frontend',
-    category: 'Web App',
-    description: 'Frontend development of a fast-food delivery platform using React.js and TailwindCSS. Includes item browsing, cart management, order placement, and a responsive UI tailored for a seamless user experience.',
-    technologies: ['React.js', 'Tailwindcss'],
-    image: 'https://i.postimg.cc/d3jDM1qL/image.png',
-    github: 'https://github.com/SanjulaMohotti/Food-Ordering-System-KFC',
-  },
-  {
-    title: 'E Channelling - Hospital Management System',
-    category: 'Web App',
-    description: 'A Java-based hospital management system that supports doctor appointments, patient registration, and record handling. Designed to streamline the workflow for medical staff and improve patient experience.',
-    technologies: ['Java'],
-    image: 'https://i.postimg.cc/7YnLsf6z/image.png',
-    github: 'https://github.com/SanjulaMohotti/Online-E-Channeling-System',
-  },
-  {
-    title: 'Textile & Garment Management System',
-    category: 'Web App',
-    description: 'A full-stack web-based management system for textile and garment industries. Includes inventory control, order tracking, user roles, and production workflows built using PHP, MySQL, and JavaScript.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
-    image: 'https://i.postimg.cc/SKr6GTh0/image.png',
-    github: 'https://github.com/SanjulaMohotti/Textile-Garment-Management-System-',
-  },
-  {
-    title: 'Employee Management System - Desktop App',
-    category: 'Desktop App',
-    description: 'A C# and SQL-based desktop application developed to streamline employee operations at Skill International. Features include employee registration, attendance tracking, payroll management, and performance monitoring. Built with a focus on usability and data integrity to improve HR processes and operational efficiency.',
-    technologies: ['C#', 'SQL'],
-    image: 'https://i.postimg.cc/XqkrT0dN/image.png',
-    github: 'https://github.com/SanjulaMohotti/Employee-Management-System',
-  }
+  
 ];
 
 
@@ -303,10 +256,10 @@ const [activeCategory, setActiveCategory] = useState('All');
               
               {/* Social Icons */}
               <div className="flex space-x-6">
-                <a href="" className="text-2xl text-gray-400 transition-colors duration-300 hover:text-red-600">
+                <a href="https://github.com/Janiith07" className="text-2xl text-gray-400 transition-colors duration-300 hover:text-red-600">
                   <Github />
                 </a>
-                <a href="" className="text-2xl text-gray-400 transition-colors duration-300 hover:text-red-600">
+                <a href="https://www.linkedin.com/in/lakindu-janith-9b16bb318/" className="text-2xl text-gray-400 transition-colors duration-300 hover:text-red-600">
                   <Linkedin />
                 </a>
               </div>
@@ -351,10 +304,10 @@ const [activeCategory, setActiveCategory] = useState('All');
                 I’m diving into frameworks like React and Node.js while sharpening my problem-solving abilities. My goal is to blend creativity with technical rigor to develop user-friendly applications that make an impact.
               </p>
               <div className="flex mt-6 space-x-4">
-                <a href="https://github.com/SanjulaMohotti" target="_blank" rel="noopener noreferrer"
+                <a href="https://github.com/Janiith07" target="_blank" rel="noopener noreferrer"
                   className="transition-colors text-white/60 hover:text-red-600">
                 <Github size={20} /></a>
-                <a href="https://www.linkedin.com/in/sanjula-mohotti-96a516339" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/in/lakindu-janith-9b16bb318/" target="_blank" rel="noopener noreferrer"
                   className="transition-colors text-white/60 hover:text-red-600"><Linkedin size={20} /></a>
               </div>
             </div>
