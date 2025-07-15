@@ -291,7 +291,7 @@ const [activeCategory, setActiveCategory] = useState('All');
           <div className="grid items-center max-w-6xl gap-12 mx-auto md:grid-cols-2">
             <div className="order-2 space-y-6 md:order-1 animate-fade-in">
               <h1 className="text-4xl font-bold text-red-600 md:text-6xl">
-                Hi, I'm <span className="text-red-600">Sanjula</span>
+                Hi, I'm <span className="text-red-600">Lakindu</span>
               </h1>
               <div className="text-2xl font-semibold text-gray-300 md:text-3xl">
                 I'm a <span className="text-red-500">{typedText}</span>
@@ -303,15 +303,15 @@ const [activeCategory, setActiveCategory] = useState('All');
               
               {/* Social Icons */}
               <div className="flex space-x-6">
-                <a href="https://github.com/SanjulaMohotti" className="text-2xl text-gray-400 transition-colors duration-300 hover:text-red-600">
+                <a href="" className="text-2xl text-gray-400 transition-colors duration-300 hover:text-red-600">
                   <Github />
                 </a>
-                <a href="https://www.linkedin.com/in/sanjula-mohotti-96a516339" className="text-2xl text-gray-400 transition-colors duration-300 hover:text-red-600">
+                <a href="" className="text-2xl text-gray-400 transition-colors duration-300 hover:text-red-600">
                   <Linkedin />
                 </a>
               </div>
               
-              <a href="/SanjulaMohottiCV.pdf" download className="inline-flex items-center gap-2 px-8 py-4 font-semibold text-white transition-all duration-300 transform rounded-full shadow-lg bg-gradient-to-r from-red-600 to-pink-800 hover:from-red-700 hover:to-pink-600 hover:scale-105 hover:shadow-red-500/25">
+              <a href="" download className="inline-flex items-center gap-2 px-8 py-4 font-semibold text-white transition-all duration-300 transform rounded-full shadow-lg bg-gradient-to-r from-red-600 to-pink-800 hover:from-red-700 hover:to-pink-600 hover:scale-105 hover:shadow-red-500/25">
                 <Download size={18} />
                 Download CV
               </a>
@@ -346,7 +346,7 @@ const [activeCategory, setActiveCategory] = useState('All');
                 <h3 className="text-2xl font-bold text-white">Introduction</h3>
               </div>
               <p className="leading-relaxed text-white/80">
-                I'm a third-year Software Engineering undergraduate at the Sri Lanka Institute of Information Technology (SLIIT), driven by a passion for building innovative and impactful digital solutions. With a strong foundation in full-stack development and mobile application design, I specialize in crafting user-friendly, efficient applications using modern technologies like React, Node.js, PHP, and Kotlin.
+                I'm a second-year Software Engineering undergraduate at the Sri Lanka Institute of Information Technology (SLIIT), driven by a passion for building innovative and impactful digital solutions. With a strong foundation in full-stack development and mobile application design, I specialize in crafting user-friendly, efficient applications using modern technologies like React, Node.js, PHP, and Kotlin.
                 I hold a Diploma in IT from ESOFT Metro Campus, which has further strengthened my technical and analytical skills. I particularly enjoy working on UI/UX design and frontend development, where creativity meets functionality.
                 I thrive in collaborative environments, love solving real-world problems, and am always eager to explore new tools and frameworks to stay ahead in the fast-evolving tech landscape.
               </p>
@@ -698,7 +698,7 @@ const [activeCategory, setActiveCategory] = useState('All');
       <Mail className="text-red-600" size={24} />
       <div>
         <h4 className="font-semibold text-white">Email</h4>
-        <p className="text-white/60">sanjulakalpani1212@gmail.com</p>
+        <p className="text-white/60">lakindujanith7@gmail.com</p>
       </div>
     </div>
 
@@ -706,7 +706,7 @@ const [activeCategory, setActiveCategory] = useState('All');
       <Phone className="text-red-600" size={24} />
       <div>
         <h4 className="font-semibold text-white">Phone</h4>
-        <p className="text-white/60">+(94) 76 298 6514</p>
+        <p className="text-white/60">+(94) 72 198 5928</p>
       </div>
     </div>
 
@@ -714,7 +714,7 @@ const [activeCategory, setActiveCategory] = useState('All');
       <MapPin className="text-red-600" size={24} />
       <div>
         <h4 className="font-semibold text-white">Location</h4>
-        <p className="text-white/60">Malabe, Sri Lanka</p>
+        <p className="text-white/60">Matara, Sri Lanka</p>
       </div>
     </div>
   </div>
@@ -722,7 +722,7 @@ const [activeCategory, setActiveCategory] = useState('All');
   {/* Social Icons at bottom */}
   <div className="flex mt-auto space-x-6">
     <a
-      href="https://github.com/SanjulaMohotti"
+      href=""
       target="_blank"
       rel="noopener noreferrer"
       className="text-gray-400 transition-colors hover:text-red-600"
@@ -731,7 +731,7 @@ const [activeCategory, setActiveCategory] = useState('All');
       <Github size={24} />
     </a>
     <a
-      href="https://www.linkedin.com/in/sanjula-mohotti-96a516339"
+      href=""
       target="_blank"
       rel="noopener noreferrer"
       className="text-gray-400 transition-colors hover:text-red-600"
@@ -740,7 +740,7 @@ const [activeCategory, setActiveCategory] = useState('All');
       <Linkedin size={24} />
     </a>
     <a
-      href="https://web.facebook.com/sanjula.kalpani.1/"
+      href=""
       target="_blank"
       rel="noopener noreferrer"
       className="text-gray-400 transition-colors hover:text-red-600"
@@ -749,7 +749,7 @@ const [activeCategory, setActiveCategory] = useState('All');
       <Facebook size={24} />
     </a>
     <a
-      href="https://www.instagram.com/_sanju_1212_/"
+      href=""
       target="_blank"
       rel="noopener noreferrer"
       className="text-gray-400 transition-colors hover:text-red-600"
@@ -804,7 +804,7 @@ const [activeCategory, setActiveCategory] = useState('All');
       <footer className="px-4 py-8 border-t border-white/10">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-white/60">
-            © 2025 Sanjula Mohotti. Built with React. All rights reserved.
+            © 2025 Lakindu Janith. Built with React. All rights reserved.
           </p>
         </div>
       </footer>
