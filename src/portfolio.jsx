@@ -165,7 +165,7 @@ const typedText = useTypedText(roles, 100, 1500);
     category: 'Web App',
     description: 'A comprehensive Java-based e-commerce solution for the toy industry. Includes toy management, order and delivery tracking, employee and user administration, payment management — all built to meet specific client requirements.',
     technologies: ['Java', 'Servlets', 'HTML', 'CSS', 'JavaScript', 'Tomcat'],
-    image: '/Toy.jpg',
+    image: './Toy.jpg',
     github: 'https://github.com/Janiith07/TOYMART_Web_Site.git',
   },
   
