@@ -18,10 +18,10 @@ const Portfolio = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      'service_lkx7t4i',       // Replace with your EmailJS service ID
-      'template_gg3ma5s',      // Replace with your EmailJS template ID
+      'service_g3ubfae',       // Replace with your EmailJS service ID
+      'template_6bnrzro',      // Replace with your EmailJS template ID
       formRef.current,
-      'cnjk90jyD2KrdyZvQ'        // Replace with your EmailJS public key
+      '98WMH2QnQgiL94Mgj'        // Replace with your EmailJS public key
     )
     .then(
       (result) => {
