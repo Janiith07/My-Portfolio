@@ -250,8 +250,8 @@ const [activeCategory, setActiveCategory] = useState('All');
                 I'm a <span className="text-red-500">{typedText}</span>
               </div>
               <p className="max-w-lg text-lg leading-relaxed text-gray-400">
-                Passionate about creating exceptional digital experiences with modern web technologies. 
-                I specialize in building scalable applications that solve real-world problems.
+                Aspiring developer driven to craft impactful digital experiences with cutting-edge technologies.
+                I focus on developing reliable, scalable systems that address practical challenges.
               </p>
               
               {/* Social Icons */}
