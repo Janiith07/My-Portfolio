@@ -251,7 +251,7 @@ const [activeCategory, setActiveCategory] = useState('All');
               </div>
               <p className="max-w-lg text-lg leading-relaxed text-gray-400">
                 Aspiring developer driven to craft impactful digital experiences with cutting-edge technologies.
-                I focus on developing reliable, scalable systems that address practical challenges.
+                I focus on developing scalable systems that address practical challenges.
               </p>
               
               {/* Social Icons */}
