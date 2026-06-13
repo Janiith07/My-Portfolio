@@ -158,7 +158,7 @@ const Portfolio = () => {
 
   // ── Skills ─────────────────────────────────────────────────────────────────
   const technicalSkills = [
-    { name: 'Python',                  level: 85 },
+    { name: 'Java',                  level: 80 },
     { name: 'TensorFlow / Keras',      level: 78 },
     { name: 'PyTorch',                 level: 75 },
     { name: 'Scikit-learn',            level: 78 },
@@ -168,7 +168,7 @@ const Portfolio = () => {
     { name: 'MongoDB',                 level: 75 },
     { name: 'React.js',                level: 70 },
     { name: 'Node.js / Express.js',    level: 70 },
-    { name: 'Java',                    level: 75 },
+    { name: 'Python',                    level: 70 },
     { name: 'JavaScript',              level: 65 },
   ];
 
