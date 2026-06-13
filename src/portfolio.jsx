@@ -584,7 +584,7 @@ const Portfolio = () => {
               <span className="text-red-500 text-xl font-semibold md:text-3xl" style={{whiteSpace:'nowrap'}}>{typedText}<span className="animate-pulse">|</span></span>
             </div>
             <p className={`text-base md:text-lg leading-relaxed ${t.muted}`}>
-              AI Engineering undergraduate at SLIIT with a strong interest in Machine Learning, Deep Learning, and Generative AI. Passionate about creating intelligent systems and continuously learning new technologies. Currently looking for an AI/ML internship opportunity.
+              AI Engineering undergraduate at SLIIT with a strong interest in Machine Learning, Deep Learning, and Generative AI. Passionate about creating intelligent systems and continuously learning new technologies. Currently looking for an AI/ML or Software Engineering internship opportunity.
             </p>
             <div className="flex space-x-6 justify-center md:justify-start">
               <a href="https://github.com/Janiith07" target="_blank" rel="noopener noreferrer" className={`text-2xl transition-colors duration-300 ${t.muted} hover:text-red-600`}><Github /></a>
