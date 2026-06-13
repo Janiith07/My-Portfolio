@@ -10,11 +10,11 @@ import toast, { Toaster } from 'react-hot-toast';
 
 // ─── Theme definitions ────────────────────────────────────────────────────────
 const DARK = {
-  page:        'bg-gradient-to-br from-black via-zinc-900 to-black',
+  page:        'bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950',
   nav:         'bg-black/20 border-white/10',
   navMobile:   'bg-black/40 border-white/10',
   card:        'bg-white/5 border-white/10',
-  cardHover:   'hover:border-red-400/50',
+  cardHover:   'hover:border-blue-400/50',
   inputBg:     'bg-black/30 border-white/10 text-white',
   tabInactive: 'bg-white/5',
   heading:     'text-white',
@@ -22,24 +22,24 @@ const DARK = {
   muted:       'text-white/60',
   mutedAlt:    'text-white/50',
   navLink:     'text-white/80',
-  accent:      'text-red-600',
-  accentHover: 'hover:text-red-600',
+  accent:      'text-blue-600',
+  accentHover: 'hover:text-blue-600',
   skillBar:    'bg-white/10',
-  timeline:    'border-red-500/30',
-  dot:         'bg-red-500',
+  timeline:    'border-blue-500/30',
+  dot:         'bg-blue-600',
   footerBorder:'border-white/10',
   toggleBg:    'bg-zinc-800 border-zinc-600',
   certBadge:   'bg-white/5 border-white/10 text-white/70',
-  certTag:     'bg-red-500/10 border-red-500/20 text-red-400',
+  certTag:     'bg-blue-600/10 border-blue-500/20 text-blue-400',
   certFilter:  'text-white/60 hover:bg-white/10',
 };
 
 const LIGHT = {
-  page:        'bg-gradient-to-br from-amber-50 via-white to-red-50',
-  nav:         'bg-white/80 border-red-100',
-  navMobile:   'bg-white/95 border-red-100',
-  card:        'bg-white border-red-100 shadow-md',
-  cardHover:   'hover:border-red-400',
+  page:        'bg-gradient-to-br from-blue-50 via-white to-indigo-50',
+  nav:         'bg-white/80 border-blue-100',
+  navMobile:   'bg-white/95 border-blue-100',
+  card:        'bg-white border-blue-100 shadow-md',
+  cardHover:   'hover:border-blue-400',
   inputBg:     'bg-white border-gray-200 text-gray-900',
   tabInactive: 'bg-gray-100',
   heading:     'text-gray-900',
@@ -47,15 +47,15 @@ const LIGHT = {
   muted:       'text-gray-500',
   mutedAlt:    'text-gray-400',
   navLink:     'text-gray-700',
-  accent:      'text-red-600',
-  accentHover: 'hover:text-red-600',
+  accent:      'text-blue-600',
+  accentHover: 'hover:text-blue-600',
   skillBar:    'bg-gray-200',
-  timeline:    'border-red-300',
-  dot:         'bg-red-500',
-  footerBorder:'border-red-100',
+  timeline:    'border-blue-300',
+  dot:         'bg-blue-600',
+  footerBorder:'border-blue-100',
   toggleBg:    'bg-white border-gray-300',
   certBadge:   'bg-gray-50 border-gray-200 text-gray-600',
-  certTag:     'bg-red-50 border-red-200 text-red-600',
+  certTag:     'bg-blue-50 border-blue-200 text-blue-700',
   certFilter:  'text-gray-500 hover:bg-gray-100',
 };
 
@@ -81,7 +81,7 @@ const ToolCard = ({ tool, t }) => (
     <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full" style={{ backgroundColor: `${tool.color}20` }}>
       <img src={tool.icon} alt={tool.name} className="w-10 h-10" />
     </div>
-    <h3 className={`font-semibold text-center transition-colors group-hover:text-red-500 ${t.heading}`}>{tool.name}</h3>
+    <h3 className={`font-semibold text-center transition-colors group-hover:text-blue-500 ${t.heading}`}>{tool.name}</h3>
   </div>
 );
 
@@ -102,7 +102,7 @@ const useTypedText = (words, speed = 100) => {
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 const Portfolio = () => {
-  const [isDark, setIsDark]                 = useState(true);
+  const [isDark, setIsDark]                 = useState(false);
   const [isMenuOpen, setIsMenuOpen]         = useState(false);
   const [activeSection, setActiveSection]   = useState('home');
   const [skillsTab, setSkillsTab]           = useState('technical');
@@ -122,12 +122,12 @@ const Portfolio = () => {
     emailjs.sendForm('service_g3ubfae', 'template_6bnrzro', formRef.current, '98WMH2QnQgiL94Mgj')
       .then(() => {
         toast.success('Message sent successfully!', {
-          style: { background: isDark ? '#1e1e1e' : '#fff', color: isDark ? '#fff' : '#111', border: '1px solid #ef4444' },
+          style: { background: isDark ? '#1e1e1e' : '#fff', color: isDark ? '#fff' : '#111', border: '1px solid #3b82f6' },
         });
         formRef.current.reset();
       }, (err) => {
         toast.error('Something went wrong. Please try again.', {
-          style: { background: isDark ? '#1e1e1e' : '#fff', color: isDark ? '#fff' : '#111', border: '1px solid #ef4444' },
+          style: { background: isDark ? '#1e1e1e' : '#fff', color: isDark ? '#fff' : '#111', border: '1px solid #3b82f6' },
         });
         console.error(err.text);
       });
@@ -523,8 +523,8 @@ const Portfolio = () => {
     ? [...aiMlTools, ...languageTools, ...frameworkTools, ...devTools, ...designTools]
     : toolMap[toolsTab] || [];
 
-  const redBtn   = 'bg-gradient-to-r from-red-600 to-pink-800 hover:from-red-700 hover:to-pink-600 text-white hover:scale-105 hover:shadow-red-500/25 shadow-lg';
-  const activeTab = 'bg-gradient-to-r from-red-600 to-pink-800 text-white shadow-lg';
+  const redBtn   = 'bg-gradient-to-r from-blue-700 to-indigo-900 hover:from-blue-800 hover:to-indigo-800 text-white hover:scale-105 hover:shadow-blue-600/25 shadow-lg';
+  const activeTab = 'bg-gradient-to-r from-blue-700 to-indigo-900 text-white shadow-lg';
 
   // ── Render ─────────────────────────────────────────────────────────────────
   return (
@@ -535,13 +535,13 @@ const Portfolio = () => {
       <nav className={`fixed top-0 z-50 w-full border-b backdrop-blur-md transition-colors duration-300 ${t.nav}`}>
         <div className="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="text-2xl font-bold text-transparent bg-gradient-to-r from-red-500 via-red-700 to-red-900 bg-clip-text">
+            <div className="text-2xl font-bold text-transparent bg-gradient-to-r from-blue-500 via-blue-700 to-indigo-900 bg-clip-text">
               W.A. Lakindu Janith
             </div>
             <div className="hidden space-x-6 md:flex">
               {['home', 'about', 'projects', 'tools', 'certifications', 'contact'].map((item) => (
                 <button key={item} onClick={() => scrollToSection(item)}
-                  className={`capitalize transition-all duration-300 hover:text-red-600 text-sm ${activeSection === item ? 'text-red-600 border-b-2 border-red-600' : t.navLink}`}>
+                  className={`capitalize font-medium transition-all duration-300 hover:text-blue-600 text-sm ${activeSection === item ? 'text-blue-600 border-b-2 border-blue-600' : t.navLink}`}>
                   {item}
                 </button>
               ))}
@@ -563,7 +563,7 @@ const Portfolio = () => {
             <div className="px-4 pt-2 pb-3 space-y-1">
               {['home', 'about', 'projects', 'tools', 'certifications', 'contact'].map((item) => (
                 <button key={item} onClick={() => scrollToSection(item)}
-                  className={`block w-full px-3 py-2 text-left capitalize transition-colors hover:text-red-600 ${t.navLink}`}>
+                  className={`block w-full px-3 py-2 text-left capitalize font-medium transition-colors hover:text-blue-600 ${t.navLink}`}>
                   {item}
                 </button>
               ))}
@@ -576,19 +576,19 @@ const Portfolio = () => {
       <section id="home" className="flex items-center justify-center min-h-screen px-6 pt-20">
         <div className="grid items-center w-full max-w-6xl gap-12 mx-auto grid-cols-1 md:grid-cols-2">
           <div className="space-y-6 text-center md:text-left order-2 md:order-1">
-            <h1 className="text-4xl font-bold text-red-600 md:text-6xl">
-              Hi, I'm <span className="text-red-600">Lakindu</span>
+            <h1 className="text-4xl font-bold text-blue-600 md:text-6xl">
+              Hi, I'm <span className="text-blue-600">Lakindu</span>
             </h1>
             <div style={{height:'2.75rem', overflow:'hidden', display:'flex', alignItems:'center'}}>
               <span className={`text-xl font-semibold md:text-3xl flex-shrink-0 ${t.subtext}`}>I'm a&nbsp;</span>
-              <span className="text-red-500 text-xl font-semibold md:text-3xl" style={{whiteSpace:'nowrap'}}>{typedText}<span className="animate-pulse">|</span></span>
+              <span className="text-blue-500 text-xl font-semibold md:text-3xl" style={{whiteSpace:'nowrap'}}>{typedText}<span className="animate-pulse">|</span></span>
             </div>
-            <p className={`text-base md:text-lg leading-relaxed ${t.muted}`}>
+            <p className={`text-base md:text-lg leading-relaxed font-medium ${t.muted}`}>
               AI Engineering undergraduate at SLIIT with a strong interest in Machine Learning, Deep Learning, and Generative AI. Passionate about creating intelligent systems and continuously learning new technologies. Currently looking for an AI/ML or Software Engineering internship opportunity.
             </p>
             <div className="flex space-x-6 justify-center md:justify-start">
-              <a href="https://github.com/Janiith07" target="_blank" rel="noopener noreferrer" className={`text-2xl transition-colors duration-300 ${t.muted} hover:text-red-600`}><Github /></a>
-              <a href="https://www.linkedin.com/in/lakindu-janith-9b16bb318/" target="_blank" rel="noopener noreferrer" className={`text-2xl transition-colors duration-300 ${t.muted} hover:text-red-600`}><Linkedin /></a>
+              <a href="https://github.com/Janiith07" target="_blank" rel="noopener noreferrer" className={`text-2xl transition-colors duration-300 ${t.muted} hover:text-blue-600`}><Github /></a>
+              <a href="https://www.linkedin.com/in/lakindu-janith-9b16bb318/" target="_blank" rel="noopener noreferrer" className={`text-2xl transition-colors duration-300 ${t.muted} hover:text-blue-600`}><Linkedin /></a>
             </div>
             <div className="flex justify-center md:justify-start">
               <a href="/Lakindu_Janith_Resume.pdf" download
@@ -599,9 +599,9 @@ const Portfolio = () => {
           </div>
           <div className="flex justify-center order-1 md:order-2">
             <div className="relative w-64 h-64 md:w-80 md:h-80">
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-red-600 to-pink-600 shadow-2xl shadow-red-600/25"></div>
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-700 to-indigo-600 shadow-2xl shadow-blue-700/25"></div>
               <img src="./image.jpg" alt="Profile"
-                className="absolute inset-0 object-cover w-full h-full border-4 border-red-600 rounded-2xl" />
+                className="absolute inset-0 object-cover w-full h-full border-4 border-blue-600 rounded-2xl" />
             </div>
           </div>
         </div>
@@ -610,32 +610,32 @@ const Portfolio = () => {
       {/* ── About ────────────────────────────────────────────────────────── */}
       <section id="about" className="px-4 py-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="mb-16 text-4xl font-bold text-center text-transparent md:text-5xl bg-gradient-to-r from-red-500 to-red-800 bg-clip-text">About Me</h2>
+          <h2 className="mb-16 text-4xl font-bold text-center text-transparent md:text-5xl bg-gradient-to-r from-blue-600 to-indigo-900 bg-clip-text">About Me</h2>
           <div className="grid gap-8 md:grid-cols-3">
             {/* Introduction */}
             <div className={`p-8 transition-all duration-300 border rounded-2xl ${t.card} ${t.cardHover} hover:scale-105`}>
               <div className="flex items-center mb-6">
-                <User className="mr-3 text-red-600" size={24} />
+                <User className="mr-3 text-blue-600" size={24} />
                 <h3 className={`text-2xl font-bold ${t.heading}`}>Introduction</h3>
               </div>
-              <p className={`leading-relaxed ${t.subtext}`}>
+              <p className={`leading-relaxed font-medium ${t.subtext}`}>
                 A second-year Artificial Intelligence Engineering undergraduate at SLIIT, passionate about building intelligent solutions using Artificial Intelligence and Machine Learning. I work across the AI/ML domain — from developing deep learning models and machine learning pipelines to integrating AI solutions into real-world applications. I have experience with Python, TensorFlow, PyTorch, scikit-learn, Generative AI, and full-stack development. Passionate about continuous learning and solving real-world problems through technology. Currently seeking an AI/ML internship to apply my skills, gain industry experience, and grow as an AI engineer.
               </p>
               <div className="flex mt-6 space-x-4">
-                <a href="https://github.com/Janiith07" target="_blank" rel="noopener noreferrer" className={`transition-colors ${t.muted} hover:text-red-600`}><Github size={20} /></a>
-                <a href="https://www.linkedin.com/in/lakindu-janith-9b16bb318/" target="_blank" rel="noopener noreferrer" className={`transition-colors ${t.muted} hover:text-red-600`}><Linkedin size={20} /></a>
+                <a href="https://github.com/Janiith07" target="_blank" rel="noopener noreferrer" className={`transition-colors ${t.muted} hover:text-blue-600`}><Github size={20} /></a>
+                <a href="https://www.linkedin.com/in/lakindu-janith-9b16bb318/" target="_blank" rel="noopener noreferrer" className={`transition-colors ${t.muted} hover:text-blue-600`}><Linkedin size={20} /></a>
               </div>
             </div>
             {/* Skills */}
             <div className={`p-8 transition-all duration-300 border rounded-2xl ${t.card} ${t.cardHover} hover:scale-105`}>
               <div className="flex items-center mb-6">
-                <Code className="mr-3 text-red-600" size={24} />
+                <Code className="mr-3 text-blue-600" size={24} />
                 <h3 className={`text-2xl font-bold ${t.heading}`}>Skills</h3>
               </div>
               <div className={`flex p-1 mb-6 rounded-lg ${t.tabInactive}`}>
                 {['technical', 'soft'].map((tab) => (
                   <button key={tab} onClick={() => setSkillsTab(tab)}
-                    className={`flex-1 py-2 px-4 rounded-md transition-all duration-300 ${skillsTab === tab ? activeTab : `${t.muted} hover:text-red-600`}`}>
+                    className={`flex-1 py-2 px-4 rounded-md transition-all duration-300 ${skillsTab === tab ? activeTab : `${t.muted} hover:text-blue-600`}`}>
                     {tab === 'technical' ? 'Technical' : 'Soft Skills'}
                   </button>
                 ))}
@@ -644,11 +644,11 @@ const Portfolio = () => {
                 {(skillsTab === 'technical' ? technicalSkills : softSkills).map((skill, i) => (
                   <div key={i}>
                     <div className="flex justify-between mb-2">
-                      <span className={`text-sm ${t.subtext}`}>{skill.name}</span>
-                      <span className="text-sm text-red-500">{skill.level}%</span>
+                      <span className={`text-sm font-medium ${t.subtext}`}>{skill.name}</span>
+                      <span className="text-sm text-blue-500">{skill.level}%</span>
                     </div>
                     <div className={`w-full h-2 rounded-full ${t.skillBar}`}>
-                      <div className="h-2 transition-all duration-1000 rounded-full bg-gradient-to-r from-red-600 to-pink-500" style={{ width: `${skill.level}%` }}></div>
+                      <div className="h-2 transition-all duration-1000 rounded-full bg-gradient-to-r from-blue-600 to-indigo-500" style={{ width: `${skill.level}%` }}></div>
                     </div>
                   </div>
                 ))}
@@ -657,13 +657,13 @@ const Portfolio = () => {
             {/* Background */}
             <div className={`p-8 transition-all duration-300 border rounded-2xl ${t.card} ${t.cardHover} hover:scale-105`}>
               <div className="flex items-center mb-6">
-                <GraduationCap className="mr-3 text-red-600" size={24} />
+                <GraduationCap className="mr-3 text-blue-600" size={24} />
                 <h3 className={`text-2xl font-bold ${t.heading}`}>Background</h3>
               </div>
               <div className={`flex p-1 mb-6 rounded-lg ${t.tabInactive}`}>
                 {['education', 'experience'].map((tab) => (
                   <button key={tab} onClick={() => setExperienceTab(tab)}
-                    className={`flex-1 py-2 px-4 rounded-md transition-all duration-300 capitalize ${experienceTab === tab ? activeTab : `${t.muted} hover:text-red-600`}`}>
+                    className={`flex-1 py-2 px-4 rounded-md transition-all duration-300 capitalize ${experienceTab === tab ? activeTab : `${t.muted} hover:text-blue-600`}`}>
                     {tab}
                   </button>
                 ))}
@@ -675,10 +675,10 @@ const Portfolio = () => {
                   (experienceTab === 'education' ? educationData : []).map((item, i) => (
                     <div key={i} className={`relative pl-6 border-l-2 ${t.timeline}`}>
                       <div className={`absolute top-0 w-3 h-3 rounded-full -left-2 ${t.dot}`}></div>
-                      <div className="mb-1 text-sm font-semibold text-red-500">{item.year}</div>
+                      <div className="mb-1 text-sm font-semibold text-blue-500">{item.year}</div>
                       <h4 className={`mb-1 font-semibold ${t.heading}`}>{item.title}</h4>
-                      <p className="mb-2 text-sm text-red-500">{item.institution}</p>
-                      <p className={`text-sm ${t.muted}`}>{item.description}</p>
+                      <p className="mb-2 text-sm text-blue-500">{item.institution}</p>
+                      <p className={`text-sm font-medium ${t.muted}`}>{item.description}</p>
                     </div>
                   ))
                 )}
@@ -691,11 +691,11 @@ const Portfolio = () => {
       {/* ── Projects ─────────────────────────────────────────────────────── */}
       <section id="projects" className="px-4 py-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="mb-16 text-4xl font-bold text-center text-transparent md:text-5xl bg-gradient-to-r from-red-500 to-red-800 bg-clip-text">Featured Projects</h2>
+          <h2 className="mb-16 text-4xl font-bold text-center text-transparent md:text-5xl bg-gradient-to-r from-blue-600 to-indigo-900 bg-clip-text">Featured Projects</h2>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {['All', 'Web App', 'Mobile App', 'AI / ML', 'IOT'].map((cat) => (
               <button key={cat} onClick={() => { setActiveCategory(cat); setShowAll(false); }}
-                className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 border ${activeCategory === cat ? `${redBtn} border-transparent` : `${t.muted} border-current hover:text-red-600 hover:border-red-400`}`}>
+                className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 border ${activeCategory === cat ? `${redBtn} border-transparent` : `${t.muted} border-current hover:text-blue-600 hover:border-blue-400`}`}>
                 {cat}
               </button>
             ))}
@@ -706,19 +706,19 @@ const Portfolio = () => {
                 <div className="relative overflow-hidden">
                   <img src={project.image} alt={project.title} className="object-cover w-full h-48 transition-transform duration-300 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <span className="absolute top-3 right-3 px-2 py-1 text-xs font-semibold text-white bg-red-600/80 rounded-full">{project.category}</span>
+                  <span className="absolute top-3 right-3 px-2 py-1 text-xs font-semibold text-white bg-blue-700/80 rounded-full">{project.category}</span>
                 </div>
                 <div className="p-6">
                   <h3 className={`mb-3 text-xl font-bold ${t.heading}`}>{project.title}</h3>
-                  <p className={`mb-4 leading-relaxed text-sm ${t.muted}`}>{project.description}</p>
+                  <p className={`mb-4 leading-relaxed text-sm font-medium ${t.muted}`}>{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, ti) => (
-                      <span key={ti} className="px-3 py-1 text-xs text-red-500 border rounded-full bg-red-500/10 border-red-500/30">{tech}</span>
+                      <span key={ti} className="px-3 py-1 text-xs text-blue-500 border rounded-full bg-blue-600/10 border-blue-500/30">{tech}</span>
                     ))}
                   </div>
                   <div className="flex gap-4 mt-4">
                     {project.github && (
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-red-600 transition-colors hover:text-red-500">
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-blue-600 transition-colors hover:text-blue-500">
                         <Github className="mr-1" size={16} /> GitHub
                       </a>
                     )}
@@ -738,12 +738,12 @@ const Portfolio = () => {
       {/* ── Tools ────────────────────────────────────────────────────────── */}
       <section id="tools" className="px-4 py-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="mb-16 text-4xl font-bold text-center text-transparent md:text-5xl bg-gradient-to-r from-red-500 to-red-800 bg-clip-text">Tools &amp; Technologies</h2>
+          <h2 className="mb-16 text-4xl font-bold text-center text-transparent md:text-5xl bg-gradient-to-r from-blue-600 to-indigo-900 bg-clip-text">Tools &amp; Technologies</h2>
           <div className="flex justify-center mb-12">
             <div className={`flex flex-wrap justify-center gap-2 p-2 border rounded-xl ${t.card}`}>
               {['All', 'Languages', 'AI / ML', 'Frameworks', 'Tools', 'Design'].map((cat) => (
                 <button key={cat} onClick={() => setToolsTab(cat)}
-                  className={`px-5 py-2.5 rounded-lg transition-all duration-300 font-medium text-sm ${toolsTab === cat ? activeTab : `${t.muted} hover:text-red-600 hover:bg-red-500/10`}`}>
+                  className={`px-5 py-2.5 rounded-lg transition-all duration-300 font-medium text-sm ${toolsTab === cat ? activeTab : `${t.muted} hover:text-blue-600 hover:bg-blue-600/10`}`}>
                   {cat}
                 </button>
               ))}
@@ -758,7 +758,7 @@ const Portfolio = () => {
       {/* ── Certifications ───────────────────────────────────────────────── */}
       <section id="certifications" className="px-4 py-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="mb-4 text-4xl font-bold text-center text-transparent md:text-5xl bg-gradient-to-r from-red-500 to-red-800 bg-clip-text">
+          <h2 className="mb-4 text-4xl font-bold text-center text-transparent md:text-5xl bg-gradient-to-r from-blue-600 to-indigo-900 bg-clip-text">
             Certifications
           </h2>
           
@@ -769,9 +769,9 @@ const Portfolio = () => {
               {certCategories.map((cat) => (
                 <button key={cat}
                   onClick={() => { setCertFilter(cat); setShowAllCerts(false); }}
-                  className={`px-4 py-2 rounded-lg transition-all duration-300 font-medium text-sm ${certFilter === cat ? activeTab : `${t.muted} hover:text-red-600 hover:bg-red-500/10`}`}>
+                  className={`px-4 py-2 rounded-lg transition-all duration-300 font-medium text-sm ${certFilter === cat ? activeTab : `${t.muted} hover:text-blue-600 hover:bg-blue-600/10`}`}>
                   {cat}
-                  <span className={`ml-1.5 text-xs px-1.5 py-0.5 rounded-full ${certFilter === cat ? 'bg-white/20' : 'bg-red-500/10 text-red-500'}`}>
+                  <span className={`ml-1.5 text-xs px-1.5 py-0.5 rounded-full ${certFilter === cat ? 'bg-white/20' : 'bg-blue-600/10 text-blue-500'}`}>
                     {cat === 'All' ? certifications.length : certifications.filter(c => c.category === cat).length}
                   </span>
                 </button>
@@ -789,13 +789,13 @@ const Portfolio = () => {
                   <div className={`flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-xl border p-1.5 ${t.certBadge}`}>
                     <img src={cert.logo} alt={cert.issuer}
                       className="w-full h-full object-contain"
-                      onError={(e) => { e.target.style.display = 'none'; e.target.parentNode.innerHTML = '<span class="text-red-500"><svg xmlns=\'http://www.w3.org/2000/svg\' width=\'24\' height=\'24\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\'><circle cx=\'12\' cy=\'8\' r=\'6\'/><path d=\'M15.477 12.89L17 22l-5-3-5 3 1.523-9.11\'/></svg></span>'; }}
+                      onError={(e) => { e.target.style.display = 'none'; e.target.parentNode.innerHTML = '<span class="text-blue-500"><svg xmlns=\'http://www.w3.org/2000/svg\' width=\'24\' height=\'24\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\'><circle cx=\'12\' cy=\'8\' r=\'6\'/><path d=\'M15.477 12.89L17 22l-5-3-5 3 1.523-9.11\'/></svg></span>'; }}
                     />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className={`font-bold text-sm leading-tight mb-1 ${t.heading}`}>{cert.title}</h3>
-                    <p className="text-red-500 text-xs font-medium">{cert.issuer}</p>
-                    <p className={`text-xs mt-0.5 ${t.mutedAlt}`}>Issued {cert.date}</p>
+                    <p className="text-blue-500 text-xs font-medium">{cert.issuer}</p>
+                    <p className={`text-xs font-medium mt-0.5 ${t.mutedAlt}`}>Issued {cert.date}</p>
                   </div>
                   {/* Category pill */}
                   <span className={`flex-shrink-0 px-2 py-1 text-xs font-semibold rounded-lg border ${cert.category === 'AI / ML' ? 'bg-violet-500/10 border-violet-500/30 text-violet-400' : cert.category === 'Data Science' ? 'bg-blue-500/10 border-blue-500/30 text-blue-400' : cert.category === 'Cloud' ? 'bg-cyan-500/10 border-cyan-500/30 text-cyan-400' : cert.category === 'Cybersecurity' ? 'bg-orange-500/10 border-orange-500/30 text-orange-400' : 'bg-green-500/10 border-green-500/30 text-green-400'}`}>
@@ -809,7 +809,7 @@ const Portfolio = () => {
                 {/* Skill tags */}
                 <div className="flex flex-wrap gap-1.5 mb-4" style={{ alignContent: 'flex-start' }}>
                   {cert.skills.map((skill, si) => (
-                    <span key={si} className={`text-xs border ${t.certTag}`} style={{ padding: '2px 8px', borderRadius: '4px', display: 'inline-flex', alignItems: 'center', height: '22px', lineHeight: '1', whiteSpace: 'nowrap' }}>{skill}</span>
+                    <span key={si} className={`text-xs font-medium border ${t.certTag}`} style={{ padding: '2px 8px', borderRadius: '4px', display: 'inline-flex', alignItems: 'center', height: '22px', lineHeight: '1', whiteSpace: 'nowrap' }}>{skill}</span>
                   ))}
                 </div>
 
@@ -827,7 +827,7 @@ const Portfolio = () => {
                 )}
 
                 {/* Award icon watermark */}
-                <Award className="absolute bottom-4 right-4 opacity-5 text-red-500" size={48} />
+                <Award className="absolute bottom-4 right-4 opacity-5 text-blue-400" size={48} />
               </div>
             ))}
           </div>
@@ -848,7 +848,7 @@ const Portfolio = () => {
       {/* ── Contact ──────────────────────────────────────────────────────── */}
       <section id="contact" className="px-4 py-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="mb-16 text-4xl font-bold text-center text-transparent md:text-5xl bg-gradient-to-r from-red-500 to-red-800 bg-clip-text">Let's Connect</h2>
+          <h2 className="mb-16 text-4xl font-bold text-center text-transparent md:text-5xl bg-gradient-to-r from-blue-600 to-indigo-900 bg-clip-text">Let's Connect</h2>
           <div className="grid gap-10 md:grid-cols-2">
             <div className={`flex flex-col h-full p-8 border rounded-2xl shadow-lg ${t.card}`}>
               <h3 className={`mb-6 text-2xl font-bold ${t.heading}`}>Get in Touch</h3>
@@ -860,10 +860,10 @@ const Portfolio = () => {
                   { icon: MapPin, label: 'Location', value: 'Malabe, Sri Lanka' },
                 ].map(({ icon: Icon, label, value }) => (
                   <div key={label} className="flex items-center gap-4">
-                    <Icon className="text-red-600 shrink-0" size={24} />
+                    <Icon className="text-blue-600 shrink-0" size={24} />
                     <div>
                       <h4 className={`font-semibold ${t.heading}`}>{label}</h4>
-                      <p className={t.muted}>{value}</p>
+                      <p className={`font-medium ${t.muted}`}>{value}</p>
                     </div>
                   </div>
                 ))}
@@ -876,7 +876,7 @@ const Portfolio = () => {
 
                 ].map(({ href, icon: Icon, label }) => (
                   <a key={label} href={href} target="_blank" rel="noopener noreferrer"
-                    className={`transition-colors ${t.muted} hover:text-red-600`} aria-label={label}>
+                    className={`transition-colors ${t.muted} hover:text-blue-600`} aria-label={label}>
                     <Icon size={24} />
                   </a>
                 ))}
@@ -890,10 +890,10 @@ const Portfolio = () => {
                   { type: 'email', name: 'user_email', placeholder: 'Your Email' },
                 ].map(({ type, name, placeholder }) => (
                   <input key={name} type={type} name={name} placeholder={placeholder} required
-                    className={`w-full p-4 border rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors ${t.inputBg}`} />
+                    className={`w-full p-4 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${t.inputBg}`} />
                 ))}
                 <textarea name="message" rows="5" placeholder="Your Message" required
-                  className={`w-full p-4 border rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors ${t.inputBg}`}></textarea>
+                  className={`w-full p-4 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${t.inputBg}`}></textarea>
                 <button type="submit" className={`px-8 py-4 font-semibold transition-all duration-300 transform rounded-full ${redBtn}`}>
                   Send Message
                 </button>
