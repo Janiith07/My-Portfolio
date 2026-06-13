@@ -211,7 +211,7 @@ const Portfolio = () => {
       category: 'Web App',
       description: "Full-stack medical center management system with six user roles. Integrated five AI services — skin disease classifier, vitamin deficiency predictor (SVM + DNN ensemble), heart disease risk predictor, clinical guidelines RAG service, and a navigation assistant.",
       technologies: ['React.js', 'Node.js', 'MongoDB', 'Python','FastAPI', 'LangChain', 'ChromaDB', 'TensorFlow/Keras', 'PyTorch', 'scikit-learn'],
-      image: './Peoples_Health_WebApp.png',
+      image: './Peoples_Health_WebApp.PNG',
       github: 'https://github.com/Janiith07/intelligent-healthcare-system',
     },
     {
@@ -227,7 +227,7 @@ const Portfolio = () => {
       category: 'AI / ML',
       description: 'Cat vs. dog classifier using a custom CNN with full pipeline — preprocessing, augmentation, Batch Normalization, Dropout, and callbacks. Flask backend with drag-and-drop UI showing real-time confidence scores.',
       technologies: ['Python', 'TensorFlow/Keras', 'Scikit-learn', 'Pandas', 'Flask', 'NumPy', 'Matplotlib', 'PCA', 'HTML', 'CSS', 'JavaScript'],
-      image: './PetVision_AI.png',
+      image: './PetVision_AI.PNG',
       github: 'https://github.com/Janiith07/petvision-ai-cats-dogs-classifier.git',
     },
     {
@@ -235,7 +235,7 @@ const Portfolio = () => {
       category: 'AI / ML',
       description: 'End-to-end ML pipeline predicting laptop prices from specs. Implemented PCA, feature engineering, and trained Random Forest, XGBoost, and ANN models. Packaged for production with joblib & pickle.',
       technologies: ['Python', 'Flask', 'scikit-learn', 'XGBoost', 'TensorFlow/Keras', 'Pandas', 'NumPy'],
-      image: './NeuroPrice.png',
+      image: './NeuroPrice.PNG',
       github: 'https://github.com/Janiith07/neuroprice-laptop-price-predictor',
     },
     {
@@ -243,7 +243,7 @@ const Portfolio = () => {
       category: 'AI / ML',
       description: 'ML web app for instant student depression risk assessment. Applied SMOTE, PCA, and trained KNN, Logistic Regression, Random Forest, SVM, and ANN models. Deployed via Flask.',
       technologies: ['Python', 'Flask', 'scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn'],
-      image: './StuMind.png',
+      image: './StuMind.PNG',
       github: 'https://github.com/Janiith07/stumind-depression-predictor',
     },
     {
@@ -574,34 +574,35 @@ const Portfolio = () => {
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section id="home" className="flex items-center justify-center min-h-screen px-6 pt-20">
-        <div style={{display:'flex', alignItems:'center', width:'100%', maxWidth:'72rem', margin:'0 auto', gap:'3rem'}}>
-          {/* Text column — flex-grow takes remaining space, image column is fixed */}
-          <div style={{flex:'1 1 0', minWidth:0}} className="space-y-6">
+        <div className="grid items-center w-full max-w-6xl gap-12 mx-auto grid-cols-1 md:grid-cols-2">
+          <div className="space-y-6 text-center md:text-left order-2 md:order-1">
             <h1 className="text-4xl font-bold text-red-600 md:text-6xl">
               Hi, I'm <span className="text-red-600">Lakindu</span>
             </h1>
-            {/* Fixed height row — typed text never shifts layout */}
             <div style={{height:'2.75rem', overflow:'hidden', display:'flex', alignItems:'center'}}>
-              <span className={`text-2xl font-semibold md:text-3xl flex-shrink-0 ${t.subtext}`}>I'm a&nbsp;</span>
-              <span className="text-red-500 text-2xl font-semibold md:text-3xl" style={{whiteSpace:'nowrap'}}>{typedText}<span className="animate-pulse">|</span></span>
+              <span className={`text-xl font-semibold md:text-3xl flex-shrink-0 ${t.subtext}`}>I'm a&nbsp;</span>
+              <span className="text-red-500 text-xl font-semibold md:text-3xl" style={{whiteSpace:'nowrap'}}>{typedText}<span className="animate-pulse">|</span></span>
             </div>
-            <p className={`text-lg leading-relaxed ${t.muted}`}>
+            <p className={`text-base md:text-lg leading-relaxed ${t.muted}`}>
               AI Engineering undergraduate at SLIIT with a strong interest in Machine Learning, Deep Learning, and Generative AI. Passionate about creating intelligent systems and continuously learning new technologies. Currently looking for an AI/ML internship opportunity.
             </p>
-            <div className="flex space-x-6">
+            <div className="flex space-x-6 justify-center md:justify-start">
               <a href="https://github.com/Janiith07" target="_blank" rel="noopener noreferrer" className={`text-2xl transition-colors duration-300 ${t.muted} hover:text-red-600`}><Github /></a>
               <a href="https://www.linkedin.com/in/lakindu-janith-9b16bb318/" target="_blank" rel="noopener noreferrer" className={`text-2xl transition-colors duration-300 ${t.muted} hover:text-red-600`}><Linkedin /></a>
             </div>
-            <a href="/Lakindu_Janith_Resume.pdf" download
-              className={`inline-flex items-center gap-2 px-8 py-4 font-semibold transition-all duration-300 transform rounded-full ${redBtn}`}>
-              <Download size={18} /> Download CV
-            </a>
+            <div className="flex justify-center md:justify-start">
+              <a href="/Lakindu_Janith_Resume.pdf" download
+                className={`inline-flex items-center gap-2 px-8 py-4 font-semibold transition-all duration-300 transform rounded-full ${redBtn}`}>
+                <Download size={18} /> Download CV
+              </a>
+            </div>
           </div>
-          {/* Image column — completely fixed size, never moves */}
-          <div style={{flex:'0 0 320px', width:'320px', height:'320px', position:'relative', flexShrink:0}}>
-            <div style={{position:'absolute', inset:0, borderRadius:'1rem', background:'linear-gradient(135deg,#dc2626,#db2777)', boxShadow:'0 25px 50px -12px rgba(220,38,38,0.25)'}}></div>
-            <img src="./image.jpg" alt="Profile"
-              style={{position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', borderRadius:'1rem', border:'4px solid #dc2626', display:'block'}} />
+          <div className="flex justify-center order-1 md:order-2">
+            <div className="relative w-64 h-64 md:w-80 md:h-80">
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-red-600 to-pink-600 shadow-2xl shadow-red-600/25"></div>
+              <img src="./image.jpg" alt="Profile"
+                className="absolute inset-0 object-cover w-full h-full border-4 border-red-600 rounded-2xl" />
+            </div>
           </div>
         </div>
       </section>
