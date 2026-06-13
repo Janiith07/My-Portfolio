@@ -871,7 +871,8 @@ const Portfolio = () => {
                 {[
                   { href: 'https://github.com/Janiith07', icon: Github, label: 'GitHub' },
                   { href: 'https://www.linkedin.com/in/lakindu-janith-9b16bb318/', icon: Linkedin, label: 'LinkedIn' },
-              
+                  { href: 'https://www.instagram.com/__lakindu___?igsh=dDMxYTRsaGdraXJm', icon: Instagram, label: 'Instagram' },
+
                 ].map(({ href, icon: Icon, label }) => (
                   <a key={label} href={href} target="_blank" rel="noopener noreferrer"
                     className={`transition-colors ${t.muted} hover:text-red-600`} aria-label={label}>
