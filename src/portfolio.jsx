@@ -402,15 +402,6 @@ const Portfolio = () => {
       credentialUrl: 'https://open.uom.lk/verify', // TODO: add your credential ID to this link
     },
     {
-      title: 'Python for Beginners',
-      issuer: 'University of Moratuwa',
-      date: 'Jun 2025',
-      category: 'Development',
-      logo: ISSUER_LOGO.Moratuwa,
-      skills: ['Python', 'Software Development'],
-      credentialUrl: 'https://open.uom.lk/verify', // TODO: add your credential ID to this link
-    },
-    {
       title: 'Introduction to Cloud Infrastructure',
       issuer: 'Microsoft',
       date: 'Dec 2025',
