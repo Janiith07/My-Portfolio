@@ -500,6 +500,7 @@ const Portfolio = () => {
     { name: 'ChromaDB',     color: '#FF6B35', icon: 'https://images.seeklogo.com/logo-png/48/1/chroma-logo-png_seeklogo-482133.png' },
   ];
   const frameworkTools = [
+    { name: 'Spring Boot', color: '#6DB33F', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg' },
     { name: 'React',        color: '#61DAFB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
     { name: 'React Native', color: '#61DAFB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
     { name: 'Node.js',      color: '#339933', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
@@ -515,7 +516,7 @@ const Portfolio = () => {
     { name: 'GitHub',         color: '#888888', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
     { name: 'MongoDB',        color: '#47A248', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
     { name: 'MySQL',          color: '#4479A1', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
-    { name: 'Oracle',         color: '#F80000', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg' },
+    { name: 'PostgreSQL', color: '#4169E1', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
     { name: 'Vercel',         color: '#888888', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg' },
     { name: 'Netlify',        color: '#00C7B7', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg' },
     { name: 'Render',         color: '#46E3B7', icon: 'https://avatars.githubusercontent.com/u/36424661?s=200&v=4' },
