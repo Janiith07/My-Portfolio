@@ -223,6 +223,14 @@ const Portfolio = () => {
       github: 'https://github.com/Janiith07/peoples-health-care-app',
     },
     {
+      title: "RoadSense – Road Traffic Sign Recognition System",
+      category: 'AI / ML',
+      description: 'AI-powered traffic sign classification system identifying 15 sign categories using a custom 5-block CNN trained from scratch. Built a direction-aware augmentation pipeline, achieving 99.82% test accuracy. Deployed as a Flask web app with live confidence visualization.',
+      technologies: ['Python', 'TensorFlow/Keras', 'NumPy', 'Pillow', 'Scikit-learn', 'Flask', 'HTML', 'CSS', 'JavaScript'],
+      image: './RoadSense.PNG',
+      github: 'https://github.com/Janiith07/RoadSense-Road-Traffic-Sign-Recognition-System.git',
+    },
+    {
       title: 'PetVision AI – Pet Image Classification',
       category: 'AI / ML',
       description: 'Cat vs. dog classifier using a custom CNN with full pipeline — preprocessing, augmentation, Batch Normalization, Dropout, and callbacks. Flask backend with drag-and-drop UI showing real-time confidence scores.',
@@ -245,6 +253,14 @@ const Portfolio = () => {
       technologies: ['Python', 'Flask', 'scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn'],
       image: './StuMind.PNG',
       github: 'https://github.com/Janiith07/stumind-depression-predictor',
+    },
+    {
+      title: 'Learnova – Learning Management System',
+      category: 'Web App',
+      description: 'Full-stack LMS connecting students and instructors on one platform. Features course & lesson management, a per-lesson quiz system with instant scoring, role-based dashboards, an instructor directory, and custom session-based authentication via Spring Security.',
+      technologies: ['Java', 'Spring Boot', 'Spring Security', 'Spring Data JPA', 'PostgreSQL', 'React', 'Vite', 'Axios'],
+      image: './Learnova.PNG',
+      github: 'https://github.com/Janiith07/learnova-learning-management-system.git',
     },
     {
       title: 'VeloSales – Adidas Business Intelligence Dashboard',
