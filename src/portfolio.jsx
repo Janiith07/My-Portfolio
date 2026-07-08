@@ -409,6 +409,15 @@ const Portfolio = () => {
       credentialUrl: 'https://www.sololearn.com/certificates/CC-GRGBEPAI', // TODO: replace with real link
     },
     {
+      title: 'Python for Beginners',
+      issuer: 'University of Moratuwa',
+      date: 'Jul 2025',
+      category: 'Development',
+      logo: ISSUER_LOGO.Moratuwa,
+      skills: ['Python', 'Software Development'],
+      credentialUrl: 'https://open.uom.lk/verify', // TODO: add your credential ID to this link
+    },
+    {
       title: 'Web Design for Beginners',
       issuer: 'University of Moratuwa',
       date: 'Jul 2025',
